@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+// Импортируем вашу кастомную тему до Bootstrap
+@import "custom-theme";
+
+body {
+    background-color: #EFFDF5;
+    color: $dark;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+  
+/* Сброс отступов и полей по умолчанию */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+/* Основной контейнер 
+.main-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $light;
+    padding: 0;
+  }
+*/

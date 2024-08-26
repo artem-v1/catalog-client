@@ -1,0 +1,39 @@
+@import "custom-theme";
+
+.navbar {
+    background-color: $light;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+a.logo {
+    display: flex;         /* Включаем flexbox */
+    justify-content: flex-start;  /* Элементы прижимаются к левому краю */
+    align-items: center;
+    gap: 0.5rem;             /* Задает отступ между элементами (опционально) */
+    text-decoration: none;
+  }
+
+a.name {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: $primary;
+    letter-spacing: 0.07rem;
+}
+
+.circle-container {
+    width: 2.5em;              /* Ширина круга */
+    height: 2.5em;             /* Высота круга, равная ширине */
+    border-radius: 50%;        /* Полный радиус для круга */
+    padding: 0.4rem;
+    border: 2px dotted;
+    border-color: $primary; /* Пунктирный бордер с нужным цветом */
+    display: flex;             /* Для центрирования изображения */
+    align-items: center;       /* Вертикальное центрирование изображения */
+    justify-content: center;   /* Горизонтальное центрирование изображения */
+    overflow: hidden;          /* Обрезка изображения по границам круга */
+  }
+  
+  .circle-container img {
+    width: 100%;               /* Изображение занимает всю ширину контейнера */
+    height: auto;              /* Высота изображения автоматически */
+  }

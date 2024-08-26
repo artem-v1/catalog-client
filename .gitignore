@@ -1,5 +1,15 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# Angular specific files
+node_modules/
+dist/
+tmp/
+out-tsc/
+.angular/
+coverage/
+# Environment files
+**/environments/
+
 # Compiled output
 /dist
 /tmp
