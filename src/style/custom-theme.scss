@@ -8,25 +8,5 @@ $info: #f6912b !default;
 $light: #ffffff !default;
 $dark: #212121 !default;
 
-.icon {
-    width: 2rem;
-    height: 2rem;
-    fill: $secondary;
-    padding-bottom: 0.4rem;
-  }
-
-  .icon-check {
-    width: 2rem;
-    height: 2rem;
-    fill: $primary;
-    //color: $primary;
-    padding-bottom: 0.5rem;
-  }
-
-  .fw-light-custom {
-    font-weight: 200 !important;
-}
-
-
-
 @import "bootstrap/scss/bootstrap";
+

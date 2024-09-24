@@ -9,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class CharacteristicsComponent {
 
+  isCollapsed = true;
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
+  onCollapseShown() {
+    this.isCollapsed = false;
+  }
+
+  onCollapseHidden() {
+    this.isCollapsed = true;
+  }
+
 }
