@@ -9,6 +9,10 @@
 
 
 <div class="container-xxl py-0">
+    
+    <button (click)="sendHttpRequest()">Send HTTP Request</button>
+    <p>{{ statusPanel }}</p>
+    
     <app-header></app-header>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
