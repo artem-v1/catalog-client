@@ -4,13 +4,21 @@
             <div class="col-10">
                 <div class="row p-4 pe-0">
                     <div class="col ps-0 pe-1">
-                        <input type="text" class="form-control p-3" placeholder="Enter email" name="email">
+                        <input type="text" class="form-control p-3" placeholder="Typ" name="email">
                     </div>
                     <div class="col pe-1 ps-1">
-                        <input type="text" class="form-control p-3" placeholder="Enter password" name="pswd2">
+                        <input type="text" class="form-control p-3" placeholder="Ort" 
+                        [(ngModel)]="cityInput"
+                        (input)="onCityChange(cityInput)"
+                        name="сity">
+                        <ul class="list-group position-absolute w-100" *ngIf="cities.length > 0">
+                            <li class="list-group-item" *ngFor="let city of cities" (click)="selectCity(city)">
+                            {{ city.displayName }}
+                            </li>
+                        </ul>
                     </div>
                     <div class="col pe-1 ps-1">
-                        <input type="text" class="form-control p-3" placeholder="Enter password" name="pswd3">
+                        <input type="text" class="form-control p-3" placeholder="Umkreis" name="pswd3">
                     </div>
                 </div>
             </div>

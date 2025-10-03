@@ -1,9 +1,28 @@
+// app.config.nokeycloak.ts
+import { ApplicationConfig } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+import { provideHttpClient } from '@angular/common/http';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    // Маршруты приложения
+    provideRouter(routes),
+
+    // HTTP-клиент (заменяет HttpClientModule)
+    provideHttpClient(),
+  ]
+};
+
+
+
+/* для работі с кейклоак - просто заменить то что віше на єто:
 import { APP_INITIALIZER, ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { KeycloakBearerInterceptor, KeycloakService } from 'keycloak-angular';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -37,6 +56,9 @@ export  const  appConfig : ApplicationConfig = {
       provide : HTTP_INTERCEPTORS , 
       useClass : KeycloakBearerInterceptor , 
       multi : true
-     } 
+     },
+     provideHttpClient(),
+     HttpClientModule,
   ] 
 };
+*/
