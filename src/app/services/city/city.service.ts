@@ -12,6 +12,6 @@ export class CityService {
 
   searchCities(query: string): Observable<CityInterface[]> {
     // Предположим, что API поддерживает поиск по имени города
-    return this.http.get<CityInterface[]>(`cd?query=${query}`);
+    return this.http.get<CityInterface[]>(`/api/cities/search?query=${query}`);
   }
 }
